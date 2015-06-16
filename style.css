@@ -15,18 +15,27 @@
   width: 250px;
 }
 
-.rounded {
+.rInputForm label {
+  color: white;
+}
+
+.subredditEntry {
   width: 90%;
+  color: white;
 }
 
 .dark {
   margin: 0 auto;
 }
 
+.col-md-4 {
+  margin-top: 10px;
+}
+
 .dark input[type=text]{
 	border:1px solid #2a2e31;
 	background-color:#2d3035;
-	color:#505358;
+	color:white;
 }
 
 .itemList{
@@ -52,23 +61,38 @@
 }
 
 /*Drop Down */
-.dropdown {
-  list-style: none;
-  float: right;
-  position:absolute;
-  right: 0;
-  bottom: 0;
 
+.info-button {
+ background-color: rgb(255, 255, 255);
+ display: block;
+}
+.dropdown {
+ width: 300px;
+ display: inline-block;
+}
+.dropdown:hover .dropdown-menu {
+   display: block;
+}
+.dropdown-menu {
+ color: black;
+ position: absolute;
+ bottom: 100%;
+ right: 0;
+ margin: 0;
 }
 .listItemTitle {
- text-align: center;
- font-style: oblique;
+text-align: center;
+font-style: oblique;
+background-color: white;
+color: black;
 }
 .descrip {
- padding-left: 7px;
- padding-right: 7px;
+padding-left: 7px;
+padding-right: 7px;
+background-color: white;
 }
 
-.col-md-4 {
-  margin-top: 10px;
+.dropdown-content {
+  background-color: white;
+  border: 2px solid black;
 }
