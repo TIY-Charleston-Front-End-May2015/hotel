@@ -93,3 +93,7 @@ button{
 }
 
 /* Template Stuff */
+
+.vidBox {
+  border: 1px solid black;
+}

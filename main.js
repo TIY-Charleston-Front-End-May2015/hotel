@@ -3,9 +3,14 @@ var vids = videos.data.children.slice(0,3); // Top 3 objs
 var newVids = _.map(vids, function(el) {
   return {
     title: el.data.title,
-    thumbnail: el.data.thumbnail_url,
+    thumbnail: el.data.thumbnail,
     url: el.data.url,
-    html: el.data.html,
+    score: el.data.score,
+    over18: el.data.over_18,
+    author: el.data.author,
+    ups: el.data.ups,
+    downs: el.data.downs,
+    subreddit: el.data.subreddit,
   }
 })
 

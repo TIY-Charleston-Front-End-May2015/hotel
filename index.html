@@ -7,22 +7,39 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
   <script type="video/html" id="videoTmpl">
-  <div class = "col-md-4" >
+  <div class = "col-md-4 vidBox" >
   <div class="vidTitle">
-  <%= title %>
+  title: <%= title %>
   </div>
   <div class="vidUrl">
-  <%= url %>
+  url: <%= url %>
   </div>
-  <div class="vidHtml">
-  <%= html %>
+  <div class="vidThumbnail">
+  <img src="<%= thumbnail %>"/>
+  </div>
+  <div class="vidScore">
+  Score: <%= score %>
+  </div>
+  <div class="vidOver18">
+  Over 18? <%= over18 %>
+  </div>
+  <div class="vidSuthor">
+  author: <%= author %>
+  </div>
+  <div class="vidUps">
+  Ups: <%= ups %>
+  </div>
+  <div class="vidDowns">
+  Downs: <%= downs %>
+  </div>
+  <div class="vidSubReddit">
+  Subreddit: <%= subreddit %>
   </div>
   </div>
 
   </script>
 </head>
 <body>
-
   <div class ="container-fluid title">
     <center>Title</center>
     <div class="dark">
@@ -41,9 +58,13 @@
      </li>
    </ul>
   </div>
-
+  <div class ="container-fluid row">
+    <ul class ="itemList">
+     <li class = "threePosts" >
 <div class="goHere"></div>
-
+</li>
+</ul>
+</div>
 <script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"> </script>
 <script type="text/javascript" src="template.js"></script>
