@@ -1,8 +1,11 @@
-var threeObjs = videos.data.children.slice(0,3);
+var vids = videos.data.children.slice(0,3); // Top 3 objs
 
-var newVideoData = _.map(threeObjs, function(el) {
+var newVids = _.map(vids, function(el) {
   return {
     title: el.data.title,
+    thumbnail: el.data.thumbnail_url,
+    url: el.data.url,
+    html: el.data.html,
   }
 })
 
