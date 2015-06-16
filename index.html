@@ -6,9 +6,45 @@
   <link rel ="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+  <script type="video/html" id="videoTmpl">
+  <div class ="col-md-4 vidBox">
+  <div class="toolbox">
+  <i class="fa fa-user cool"> <%= author %></i><i class="fa fa-chevron-up cool"></i><i class="fa fa-chevron-down cool"></i>
+  </div>
+  <div class="vidUrl">
+  url:<%= url %>
+  </div>
+  <div class="vidTitle">
+  title: <%= title %>
+  </div>
+  <div class="vidThumbnail">
+  <img src="<%= thumbnail %>"/>
+  </div>
+  <div class="vidScore">
+  Score: <%= score %>
+  </div>
+  <div class="vidOver18">
+  Over 18? <%= over18 %>
+  </div>
+  <div class="vidSuthor">
+  author: <%= author %>
+  </div>
+  <div class="vidUps">
+  Ups: <%= ups %>
+  </div>
+  <div class="vidDowns">
+  Downs: <%= downs %>
+  </div>
+  <div class="vidSubReddit">
+  Subreddit: <%= subreddit %>
+  </div>
+  </div>
+  </script>
 </head>
-<body>
 
+<!-- to be added -->
+
+<body>
   <div class ="container-fluid title">
     <center><i class="fa fa-reddit"></i></label>Digest</center>
     <div class="dark">
@@ -79,11 +115,17 @@
      </li>
    </ul>
   </div>
-
-
-<script type="text/javascript" src="bower_components/underscore/underscore.js"> </script>
+  <div class ="container-fluid row">
+    <ul class ="itemList">
+     <li class = "threePosts">
+<div class="goHere"></div>
+</li>
+</ul>
+</div>
+<script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"> </script>
-<script type="text/javascript"  src="template.js"></script>
-<script type='text/javascript' src="main.js"></script>
+<script type="text/javascript" src="template.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
 </body>
 </html>
