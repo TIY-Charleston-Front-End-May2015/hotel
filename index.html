@@ -13,17 +13,68 @@
     <center>Title</center>
     <div class="dark">
     <form>
-    	<span><input type="text" class="search rounded" placeholder="Search..."></span>
+    	<span><input type="text" class="search rounded text-center" placeholder="Search..."></span>
     </form>
   </div>
 </div>
 
-  <div class ="container-fluid row">
-    <ul class ="itemList">
-     <li class = "threePosts" >
-       <div class = "col-md-4 columnOne rPost text-center" ><button>Description</button></div>
-       <div class= "col-md-4 columnOne rPost text-center"><button>Description</button></div>
-       <div class= "col-md-4 columnOne rPost text-center"><button>Description</button></div>
+  <div class="container-fluid row">
+    <ul class="itemList">
+     <li class="threePosts">
+
+       <div class="col-md-4 columnOne rPost text-center">
+          <img class="redditPicture" src="http://darkroom.baltimoresun.com/wp-content/uploads/2012/06/AFP_Getty-511590700.jpg">
+          <ul>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-sm btn-info" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">info
+                <span class="caret"></span>
+              </a>
+          </ul>
+              <ul class="dropdown-menu">
+                <li><a class="listItemTitle" href="#">Video Title?</a></li>
+                <li role="separator" class="divider"></li>
+                <li>
+                  <p class="descrip">Lorem ipsum dolor sit amet, consectetur <br>adipisicing elit,
+                  sed do eiusmod tempor incididunt ut<br> labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud.</p>
+                </li>
+            </li>
+              </ul>
+       </div>
+
+       <div class= "col-md-4 columnOne rPost text-center">
+         <img class ="redditPicture" src= "http://hulubei.net/tudor/photography/photos/G/a/Gay-Pride-Parade-New-York-2009-121-750x500.jpg">
+          <ul>
+           <li class="dropdown">
+             <a href="#" class="dropdown-toggle btn btn-sm btn-info" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">info<span class="caret"></span></a>
+         </ul>
+             <ul class="dropdown-menu">
+               <li><a class="listItemTitle" href="#">Video Title?</a></li>
+               <li role="separator" class="divider"></li>
+               <li><p class="descrip">Lorem ipsum dolor sit amet, consectetur <br>adipisicing elit,
+               sed do eiusmod tempor incididunt ut<br> labore et dolore magna aliqua.
+               Ut enim ad minim veniam, quis nostrud.</p></li>
+           </li>
+             </ul>
+
+       </div>
+
+       <div class= "col-md-4 columnOne rPost text-center">
+         <img class ="redditPicture" src= "http://imagene.youropi.com/amsterdam-pride-festival-evenement-amsterda-2(p:event,3617)(c:0).JPG">
+           <ul>
+           <li class="dropdown">
+             <a href="#" class="dropdown-toggle btn btn-sm btn-info" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">info<span class="caret"></span></a>
+           </ul>
+              <ul class="dropdown-menu">
+               <li><a class="listItemTitle" href="#">Video Title?</a></li>
+               <li role="separator" class="divider"></li>
+               <li><p class="descrip">Lorem ipsum dolor sit amet, consectetur <br>adipisicing elit,
+               sed do eiusmod tempor incididunt ut<br> labore et dolore magna aliqua.
+               Ut enim ad minim veniam, quis nostrud.</p></li>
+           </li>
+             </ul>
+       </div>
+
      </li>
    </ul>
   </div>
@@ -31,7 +82,7 @@
 
 <script type="text/javascript" src="bower_components/underscore/underscore.js"> </script>
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"> </script>
-<script type="text/javascript"  src-"templates.js"></script>
+<script type="text/javascript"  src="template.js"></script>
 <script type='text/javascript' src="main.js"></script>
 </body>
 </html>
