@@ -115,3 +115,15 @@ input[type=button], input[type=button]:hover {
  padding-right: 7px;
 
 }
+
+/* Template Stuff */
+
+.vidBox {
+  border: 1px solid black;
+}
+
+.cool {
+  margin: 3px;
+  font-size: 2rem;
+  color: white;
+}
