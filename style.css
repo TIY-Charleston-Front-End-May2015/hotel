@@ -1,0 +1,14 @@
+.title{
+  width:100%;
+  background-color:blue;
+  height: 12em;
+}
+
+ .title center{
+  font-size: 5em;
+  margin-top: 2%;
+}
+
+.itemList{
+  list-style: none;
+}
