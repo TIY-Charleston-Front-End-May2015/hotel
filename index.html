@@ -7,12 +7,15 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
   <script type="video/html" id="videoTmpl">
-  <div class = "col-md-4 vidBox" >
-  <div class="vidTitle">
-  title: <%= title %>
+  <div class ="col-md-4 vidBox">
+  <div class="toolbox">
+  <i class="fa fa-user cool"> <%= author %></i><i class="fa fa-chevron-up cool"></i><i class="fa fa-chevron-down cool"></i>
   </div>
   <div class="vidUrl">
-  url: <video src="<%= url %>" frameborder="0" allowfullscreen></video>
+  url: <video src="<%= url %>"></source>
+  </div>
+  <div class="vidTitle">
+  title: <%= title %>
   </div>
   <div class="vidThumbnail">
   <img src="<%= thumbnail %>"/>
@@ -38,28 +41,107 @@
   </div>
   </script>
 </head>
+
+<div class="vidTitle">
+title: <%= title %>
+</div>
+<div class="vidThumbnail">
+<img src="<%= thumbnail %>"/>
+</div>
+<div class="vidScore">
+Score: <%= score %>
+</div>
+<div class="vidOver18">
+Over 18? <%= over18 %>
+</div>
+<div class="vidSuthor">
+author: <%= author %>
+</div>
+<div class="vidUps">
+Ups: <%= ups %>
+</div>
+<div class="vidDowns">
+Downs: <%= downs %>
+</div>
+<div class="vidSubReddit">
+Subreddit: <%= subreddit %>
+</div>
+
+<!-- to be added -->
+
 <body>
   <div class ="container-fluid title">
     <center>Title</center>
     <div class="dark">
     <form>
-    	<span><input type="text" class="search rounded" placeholder="Search..."></span>
+    	<span><input type="text" class="search rounded text-center" placeholder="Search..."></span>
     </form>
   </div>
 </div>
 
-  <div class ="container-fluid row">
-    <ul class ="itemList">
-     <li class = "threePosts" >
-       <div class = "col-md-4 columnOne rPost text-center" ><button>Description</button></div>
-       <div class= "col-md-4 columnOne rPost text-center"><button>Description</button></div>
-       <div class= "col-md-4 columnOne rPost text-center"><button>Description</button></div>
+  <div class="container-fluid row">
+    <ul class="itemList">
+     <li class="threePosts">
+
+       <div class="col-md-4 columnOne rPost text-center">
+          <img class="redditPicture" src="http://darkroom.baltimoresun.com/wp-content/uploads/2012/06/AFP_Getty-511590700.jpg">
+          <ul>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-sm btn-info" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">info
+                <span class="caret"></span>
+              </a>
+          </ul>
+              <ul class="dropdown-menu">
+                <li><a class="listItemTitle" href="#">Video Title?</a></li>
+                <li role="separator" class="divider"></li>
+                <li>
+                  <p class="descrip">Lorem ipsum dolor sit amet, consectetur <br>adipisicing elit,
+                  sed do eiusmod tempor incididunt ut<br> labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud.</p>
+                </li>
+            </li>
+              </ul>
+       </div>
+
+       <div class= "col-md-4 columnOne rPost text-center">
+         <img class ="redditPicture" src= "http://hulubei.net/tudor/photography/photos/G/a/Gay-Pride-Parade-New-York-2009-121-750x500.jpg">
+          <ul>
+           <li class="dropdown">
+             <a href="#" class="dropdown-toggle btn btn-sm btn-info" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">info<span class="caret"></span></a>
+         </ul>
+             <ul class="dropdown-menu">
+               <li><a class="listItemTitle" href="#">Video Title?</a></li>
+               <li role="separator" class="divider"></li>
+               <li><p class="descrip">Lorem ipsum dolor sit amet, consectetur <br>adipisicing elit,
+               sed do eiusmod tempor incididunt ut<br> labore et dolore magna aliqua.
+               Ut enim ad minim veniam, quis nostrud.</p></li>
+           </li>
+             </ul>
+
+       </div>
+
+       <div class= "col-md-4 columnOne rPost text-center">
+         <img class ="redditPicture" src= "http://imagene.youropi.com/amsterdam-pride-festival-evenement-amsterda-2(p:event,3617)(c:0).JPG">
+           <ul>
+           <li class="dropdown">
+             <a href="#" class="dropdown-toggle btn btn-sm btn-info" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">info<span class="caret"></span></a>
+           </ul>
+              <ul class="dropdown-menu">
+               <li><a class="listItemTitle" href="#">Video Title?</a></li>
+               <li role="separator" class="divider"></li>
+               <li><p class="descrip">Lorem ipsum dolor sit amet, consectetur <br>adipisicing elit,
+               sed do eiusmod tempor incididunt ut<br> labore et dolore magna aliqua.
+               Ut enim ad minim veniam, quis nostrud.</p></li>
+           </li>
+             </ul>
+       </div>
+
      </li>
    </ul>
   </div>
   <div class ="container-fluid row">
     <ul class ="itemList">
-     <li class = "threePosts" >
+     <li class = "threePosts">
 <div class="goHere"></div>
 </li>
 </ul>
@@ -68,5 +150,6 @@
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"> </script>
 <script type="text/javascript" src="template.js"></script>
 <script type="text/javascript" src="main.js"></script>
+
 </body>
 </html>

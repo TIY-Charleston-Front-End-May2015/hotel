@@ -1,3 +1,5 @@
+
+
 var vids = videos.data.children.slice(0,3); // Top 3 objs
 
 var newVids = _.map(vids, function(el) {
