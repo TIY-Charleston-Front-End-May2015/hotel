@@ -5,9 +5,11 @@ $(document).ready(function () {
 
 var json =  "/.json";
 var subredditURL = ["video","pics","funny"]
+
 var page = {
 
-url: 'https://www.reddit.com/r/' + subredditURL[2],
+url: 'https://www.reddit.com/r/' + subredditURL[0],
+urlWithoutInitialSubreddit: "https://www.reddit.com/r/",
 
 
   init: function () {
@@ -33,20 +35,24 @@ url: 'https://www.reddit.com/r/' + subredditURL[2],
       // event.preventDefault();
       subredditURL.push($('.search').val());
 
-
   },
 
-  getSubReddits: function () {
 
-    //  var earl = _.each(subredditURL, function(el,value){
-    //    console.log(el,value)
-    //    if($('.search').val() === el) {
-    //    con subredditURL[value];
-    //  }
-    // })
+
+  getSubReddits: function () {
+    var newEarl
+    _.each(subredditURL, function(el,idx){
+      if($('.search').val() === el) {
+      //  page.getSubReddits;
+        newEarl = idx
+      }
+   })
+   console.log("NewEarl: ", newEarl)
+   console.log("ITEM: ", subredditURL[newEarl])
+
 
     $.ajax({
-    url: page.url + json,
+    url: page.urlWithoutInitialSubreddit + subredditURL[newEarl] + json,
     method: 'GET',
     success: function (videos) {
       console.log(videos);
@@ -74,13 +80,14 @@ url: 'https://www.reddit.com/r/' + subredditURL[2],
 
     _.each(newVids, function (el) {
       // console.log(videoTmpl(el));
-      $('.goHere').append(videoTmpl(el));
+      $('.goHere').prepend(videoTmpl(el));
     });
     },
     error: function (err) {
       console.log("subreddit error:", err);
     }
   });
+
 
 },
 
