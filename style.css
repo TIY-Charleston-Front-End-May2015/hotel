@@ -1,3 +1,11 @@
+.page {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
 .title{
   width:100%;
   background-color:blue;
