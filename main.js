@@ -2,7 +2,6 @@ $(document).ready(function () {
   page.init();
 });
 
-
 var json =  "/.json";
 var subredditURL = ["video","pics","funny"]
 
@@ -24,11 +23,21 @@ urlWithoutInitialSubreddit: "https://www.reddit.com/r/",
       page.getSubReddits();
     });
 
+    page.getSubReddits();
+
   },
 
   initEvents: function () {
+    $('.toggle').on('click', 'a', page.togglePages);
 
 
+  },
+
+  togglePages: function (event) {
+    event.preventDefault();
+    var clickedPage = $(this).attr('rel');
+    $(clickedPage).siblings().removeClass('active');
+    $(clickedPage).addClass('active');
   },
 
   addSubReddits: function(event) {

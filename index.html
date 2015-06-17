@@ -8,60 +8,112 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
   <script type="video/html" id="videoTmpl">
+  <div class ="col-md-4 columnOne">
 
-  <div class ="col-md-4 vidBox">
-  <div class="toolbox">
-  <i class="fa fa-user cool"> <%= author %></i><i class="fa fa-chevron-up cool"></i><i class="fa fa-chevron-down cool"></i>
-  </div>
-  <div class="vidUrl">
-  url:<%= url %>
-  </div>
-  <div class="vidTitle">
-  title: <%= title %>
-  </div>
-  <div class="vidThumbnail">
-  <img src="<%= thumbnail %>"/>
-  </div>
-  <div class="vidScore">
-  Score: <%= score %>
-  </div>
-  <div class="vidOver18">
-  Over 18? <%= over18 %>
-  </div>
-  <div class="vidSuthor">
-  author: <%= author %>
-  </div>
-  <div class="vidUps">
-  Ups: <%= ups %>
-  </div>
-  <div class="vidDowns">
-  Downs: <%= downs %>
-  </div>
-  <div class="vidSubReddit">
-  Subreddit: <%= subreddit %>
-  </div>
- </div>
- </script>
+  <a class="viUrl" href = "<%= url %>">
+  <div style=
+  "background-image: url(<%= thumbnail %>);
+   height: 200px;
+   width: 400px;
+   border: 1px solid black;
+   background-repeat:no-repeat;"
+
+   </div>
+   </a>
+
+   <div>
+     <i class="fa fa-user cool"> <%= author %></i><i class="fa fa-chevron-up cool"><%= ups %></i><i class="fa fa-chevron-down cool"><%= downs %></i>
+   </div>
+   </div>
+  </script>
+ <!-- //  <div class ="col-md-4 vidBox">
+ //  <div class="toolbox">
+ //  <i class="fa fa-user cool"> <%= author %></i><i class="fa fa-chevron-up cool"></i><i class="fa fa-chevron-down cool"></i>
+ //  </div>
+ //  <div class="vidUrl">
+ //  url:<%= url %>
+ //  </div>
+ //  <div class="vidTitle">
+ //  title: <%= title %>
+ //  </div>
+ //  <div class="vidThumbnail">
+ //  <img src="<%= thumbnail %>"/>
+ //  </div>
+ //  <div class="vidScore">
+ //  Score: <%= score %>
+ //  </div>
+ //  <div class="vidOver18">
+ //  Over 18? <%= over18 %>
+ //  </div>
+ //  <div class="vidSuthor">
+ //  author: <%= author %>
+ //  </div>
+ //  <div class="vidUps">
+ //  Ups: <%= ups %>
+ //  </div>
+ //  <div class="vidDowns">
+ //  Downs: <%= downs %>
+ //  </div>
+ //  <div class="vidSubReddit">
+ //  Subreddit: <%= subreddit %>
+ //  </div>
+ // </div> -->
+
 </head>
 
-<!-- to be added -->
 <body>
   <div class ="container-fluid title">
-    <center><i class="fa fa-reddit"></i></label>Digest</center>
+    <center><i class="fa fa-reddit"></i></label><span>Digest</center>
     <div class="dark">
       <label for="search">/r/</label>
     	<input type="text" class="search subredditEntry">
   </div>
 </div>
 
-<div class ="contentContainer">
+<div class ="contentContainer page home active">
+  <select class="" name="">
+<option rel=".hour">hour</option>
+<option rel=".day">day</option>
+<option rel=".week">week</option>
+<option rel=".year">year</option>
+<option rel=".alltime">all time</option>
+  </select>
   <ul class="itemList">
     <li class = "container-fluid row threePosts rpost goHere text-center">
     </li>
   </ul>
 </div>
 
-<div class ="contentContainer page">
+
+<div class ="contentContainer page hour">
+  <ul class="itemList">
+    <li class = "container-fluid row threePosts rpost goHere text-center">
+    </li>
+  </ul>
+</div>
+
+<div class ="contentContainer page day">
+  <ul class="itemList">
+    <li class = "container-fluid row threePosts rpost goHere text-center">
+    </li>
+  </ul>
+</div>
+
+<div class ="contentContainer page week">
+  <ul class="itemList">
+    <li class = "container-fluid row threePosts rpost goHere text-center">
+    </li>
+  </ul>
+</div>
+
+<div class ="contentContainer page year">
+  <ul class="itemList">
+    <li class = "container-fluid row threePosts rpost goHere text-center">
+    </li>
+  </ul>
+</div>
+
+<div class ="contentContainer page alltime">
   <ul class="itemList">
     <li class = "container-fluid row threePosts rpost goHere text-center">
     </li>
