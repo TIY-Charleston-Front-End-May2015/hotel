@@ -38,12 +38,12 @@ url: 'https://www.reddit.com/r/' + subredditURL[2],
 
   getSubReddits: function () {
 
-     var earl = _.each(subredditURL, function(el,value){
-       console.log(el,value)
-       if($('.search').val() === el) {
-       con subredditURL[value];
-     }
-    })
+    //  var earl = _.each(subredditURL, function(el,value){
+    //    console.log(el,value)
+    //    if($('.search').val() === el) {
+    //    con subredditURL[value];
+    //  }
+    // })
 
     $.ajax({
     url: page.url + json,
