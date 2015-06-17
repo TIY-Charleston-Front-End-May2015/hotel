@@ -4,11 +4,11 @@ $(document).ready(function () {
 
 
 var json =  "/.json";
-var subredditURL = ["videos", "pics", "funny"]
+var subredditURL = ["video","pics","funny"]
 
 var page = {
 
-url: 'https://www.reddit.com/r/' + subredditURL[0],
+url: 'https://www.reddit.com/r/' + subredditURL[2],
 
 
   init: function () {
@@ -21,7 +21,7 @@ url: 'https://www.reddit.com/r/' + subredditURL[0],
       e.preventDefault();
       page.addSubReddits()
       page.getSubReddits();
-
+      page.getSubNames();
     });
 
   },
@@ -34,16 +34,24 @@ url: 'https://www.reddit.com/r/' + subredditURL[0],
   addSubReddits: function(event) {
       // event.preventDefault();
       subredditURL.push($('.search').val());
+
+
   },
+
   getSubReddits: function () {
 
-  $.ajax({
+    //  var eachOne = _.each(subredditURL, function(el,value){
+    //    console.log(el,value)
+    //    if (value === )
+    // })
+
+    $.ajax({
     url: page.url + json,
     method: 'GET',
     success: function (videos) {
       console.log(videos);
     var vids = videos.data.children.slice(0,3);
-    console.log(vids);
+    // console.log(vids);
     var newVids = _.map(vids, function(el) {
       return {
         title: el.data.title,
@@ -56,18 +64,15 @@ url: 'https://www.reddit.com/r/' + subredditURL[0],
         downs: el.data.downs,
         subreddit: el.data.subreddit,
       }
-      // if(thumbnail === "nsfw") {
-      //   console.log("Oh no!")
-      // }
     })
 
 
 
-    console.log(newVids);
+    // console.log(newVids);
     var videoTmpl = _.template($('#videoTmpl').html());
 
     _.each(newVids, function (el) {
-      console.log(videoTmpl(el));
+      // console.log(videoTmpl(el));
       $('.goHere').append(videoTmpl(el));
     });
     },
@@ -75,5 +80,37 @@ url: 'https://www.reddit.com/r/' + subredditURL[0],
       console.log("subreddit error:", err);
     }
   });
- }
+
+},
+
+ getSubNames: function () {
+
+   $.ajax({
+   url: page.url + json,
+   method: 'GET',
+   success: function (videos) {
+     console.log(videos);
+   var vids = videos.data.children.slice(0,1);
+   // console.log(vids);
+   var newVids = _.map(vids, function(el) {
+     return {
+       subreddit: el.data.subreddit,
+     }
+   })
+
+   // console.log(newVids);
+   var subTmpl = _.template($('#subTmpl').html());
+
+   _.each(newVids, function (el) {
+     // console.log(videoTmpl(el));
+     $('.goHere').append(subTmpl(el));
+   });
+   },
+   error: function (err) {
+     console.log("subreddit error:", err);
+   }
+ });
+
+}
+
 };
