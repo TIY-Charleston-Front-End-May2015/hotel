@@ -9,60 +9,41 @@
   margin-top: 2%;
 }
 /* Styling for find button */
-form{
-	width:500px;
-	margin:0 auto;
-}
-.search {
-	padding:6px 15px 6px 30px;
-	margin:3px;
-	background:no-repeat 8px 6px;
+
+.rInputForm {
+  margin: 0 auto;
+  width: 250px;
 }
 
-.rounded {
-	border-radius:15px;
-	-moz-border-radius:15px;
-	-webkit-border-radius:15px;
+.rInputForm label {
+  color: white;
 }
 
-input[type=text]{
-	color:#bcbcbc;
-}
-
-input[type=button], input[type=button]:hover {
-	position:relative;
-	left:-6px;
-	border:1px solid #adc5cf;
-	background: #e4f1f9; /* Old browsers */
-	background: -moz-linear-gradient(top, #e4f1f9 0%, #d5e7f3 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e4f1f9), color-stop(100%,#d5e7f3)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #e4f1f9 0%,#d5e7f3 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #e4f1f9 0%,#d5e7f3 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #e4f1f9 0%,#d5e7f3 100%); /* IE10+ */
-	background: linear-gradient(top, #e4f1f9 0%,#d5e7f3 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4f1f9', endColorstr='#d5e7f3',GradientType=0 ); /* IE6-9 */
-	color:#7da2aa;
-	cursor: pointer;
+.subredditEntry {
+  width: 250px;
+  margin: 0 auto;
+  color: white;
 }
 
 .dark {
-  width: 95%;
-  height: 50px;
-  margin-left: 12%;
+  margin: 0 auto;
+  width: 270px;
+}
+
+.col-md-4 {
+  margin-top: 10px;
 }
 
 .dark input[type=text]{
 	border:1px solid #2a2e31;
 	background-color:#2d3035;
-	color:#505358;
+	color:white;
 }
 
 .itemList{
   list-style: none;
   padding: 0px;
   margin: 0px;
-  height: 100%;
-  width: 100%;
 }
 
 .row{
@@ -70,46 +51,62 @@ input[type=button], input[type=button]:hover {
   padding-left: 0px;
   padding-right: 0px;
   margin-right: 5%;
-  background-color: black;
-  height: 54em;
   margin-top:1%;
 }
 
-
-
 .threePosts{
-  height:100%;
-  background-color: purple;
+
 }
 
 .columnOne{
-  height:60%;
-  border: 1px solid black;
   padding:0;
 }
 
-
-/* Auto sizes pictures from redit */
-.redditPicture{
-  width:100%;
-  height:100%;
-  float:left;
-}
-
 /*Drop Down */
-.dropdown {
- float: right;
- position:absolute;
- right: 0;
- bottom: 0;
 
+.info-button {
+ background-color: rgb(255, 255, 255);
+ display: block;
+}
+.dropdown {
+ width: 300px;
+ display: inline-block;
+}
+.dropdown:hover .dropdown-menu {
+   display: block;
+}
+.dropdown-menu {
+ color: black;
+ position: absolute;
+ bottom: 100%;
+ right: 0;
+ margin: 0;
 }
 .listItemTitle {
- text-align: center;
- font-style: oblique;
+text-align: center;
+font-style: oblique;
+background-color: white;
+color: black;
 }
 .descrip {
- padding-left: 7px;
- padding-right: 7px;
+padding-left: 7px;
+padding-right: 7px;
+background-color: white;
+}
 
+.dropdown-content {
+  background-color: white;
+  border: 2px solid black;
+}
+
+/* Template Stuff */
+
+.vidBox {
+  border: 1px solid black;
+}
+
+.cool {
+  margin: 3px;
+  font-size: 2rem;
+  color: white;
 }
