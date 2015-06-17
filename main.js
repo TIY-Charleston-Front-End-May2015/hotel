@@ -2,13 +2,11 @@ $(document).ready(function () {
   page.init();
 });
 
-
 var json =  "/.json";
-var subredditURL = ["videos", "pics", "funny"]
 
 var page = {
 
-url: 'https://www.reddit.com/r/' + subredditURL[0],
+url: 'https://www.reddit.com/r/videos/',
 
 
   init: function () {
@@ -17,12 +15,8 @@ url: 'https://www.reddit.com/r/' + subredditURL[0],
   },
 
   initStyling: function () {
-    $('.search').on('change', function(e) {
-      e.preventDefault();
-      page.addSubReddits()
-      page.getSubReddits();
 
-    });
+    page.getSubReddits();
 
   },
 
@@ -31,10 +25,6 @@ url: 'https://www.reddit.com/r/' + subredditURL[0],
 
   },
 
-  addSubReddits: function(event) {
-      // event.preventDefault();
-      subredditURL.push($('.search').val());
-  },
   getSubReddits: function () {
 
   $.ajax({
