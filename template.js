@@ -1,51 +1,38 @@
-  // var templates = {};
-  //
-  // templates.threePosts = [
-  //
-  //   "<li class = 'threePosts'>",
-  //     "<div = 'col-md-4 columnOne rPost'><%= redditPost1 %><button><%= postOneDesc %> </button></div>",
-  //     "<div = 'col-md-4 columnOne rPost'><%= redditPost2 %><button><%= postTwoDesc %> </button></div>",
-  //     "<div = 'col-md-4 columnOne rPost'><%= redditPost3 %><button><%= postThreeDesc %></button></div>",
-  //   "</li>"
-  //
-  // ].join("");
+var templates = {};
 
-// <li class="container-fluid row threePosts">
-//   <h3><%= subreddit %></h3>
-//   <div class="col-xs-12 col-md-4 columnOne rPost text-center">
-//    <img class="redditPicture" src="http://www.fillmurray.com/200/200">
-//      <div class="dropdown">
-//         <button class="info-button"><span><i class="fa fa-reddit"></i></span>
-//           <ul class="dropdown-menu">
-//            <li class="dropdown-content"><p class="listItemTitle">Video Title?</p>
-//            <p class="descrip">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p></li>
-//           </ul>
-//         </button>
-//     </div>
-//   </div>
-//
-//   <div class= "col-xs-12 col-md-4 columnOne rPost text-center">
-//     <img class ="redditPicture" src= "http://www.fillmurray.com/200/200">
-//     <div class="dropdown">
-//        <button class="info-button"><span><i class="fa fa-reddit"></i></span>
-//          <ul class="dropdown-menu">
-//           <li class="dropdown-content"><p class="listItemTitle">Video Title?</p>
-//           <p class="descrip">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p></li>
-//          </ul>
-//        </button>
-//    </div>
-//   </div>
-//
-//   <div class= "col-xs-12 col-md-4 columnOne rPost text-center">
-//     <img class ="redditPicture" src= "http://www.fillmurray.com/200/200">
-//     <div class="dropdown">
-//        <button class="info-button"><span><i class="fa fa-reddit"></i></span>
-//          <ul class="dropdown-menu">
-//           <li class="dropdown-content"><p class="listItemTitle">Video Title?</p>
-//           <p class="descrip">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p></li>
-//          </ul>
-//        </button>
-//    </div>
-//   </div>
-//
-// </li>
+templates.redditVideo = [
+
+
+  '<div class ="col-md-4 vidBox">'
+  '<div class="toolbox">'
+  '<i class="fa fa-user cool"> <%= author %></i><i class="fa fa-chevron-up cool"></i><i class="fa fa-chevron-down cool"></i>'
+  '</div>'
+  '<div class="redditPicture">'
+  'url:<%= url %>'
+  '</div>'
+  '<div class="vidTitle">'
+  'title: <%= title %>'
+  '</div>'
+  '<div class="vidThumbnail">'
+  '<img src="<%= thumbnail %>"/>'
+  '</div>'
+  '<div class="vidScore">'
+  'Score: <%= score %>'
+  '</div>'
+  '<div class="vidOver18">'
+  'Over 18? <%= over18 %>'
+  '</div>'
+  '<div class="vidSuthor">'
+  'author: <%= author %>'
+  '</div>'
+  '<div class="vidUps">'
+  'Ups: <%= ups %>'
+  '</div>'
+  '<div class="vidDowns">'
+  'Downs: <%= downs %>'
+  '</div>'
+  '<div class="vidSubReddit">'
+  'Subreddit: <%= subreddit %>'
+  '</div>'
+  's'
+].join("");
