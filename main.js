@@ -46,7 +46,13 @@ url: 'https://www.reddit.com/r/videos/',
         downs: el.data.downs,
         subreddit: el.data.subreddit,
       }
+      // if(thumbnail === "nsfw") {
+      //   console.log("Oh no!")
+      // }
     })
+
+
+
     console.log(newVids);
     var videoTmpl = _.template($('#videoTmpl').html());
 
