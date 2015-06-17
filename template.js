@@ -2,37 +2,32 @@ var templates = {};
 
 templates.redditVideo = [
 
+  '<div class ="col-md-4 columnOne">'
 
-  '<div class ="col-md-4 vidBox">'
-  '<div class="toolbox">'
-  '<i class="fa fa-user cool"> <%= author %></i><i class="fa fa-chevron-up cool"></i><i class="fa fa-chevron-down cool"></i>'
+  '<a class="viUrl" href = "<%= url %>">'
+  '<img class="redditPicture" src="<%= thumbnail %>">'
+  '</a>'
+
+
+  '<i class="fa fa-user cool"> <%= author %></i><i class="fa fa-chevron-up cool"><%= ups %></i><i class="fa fa-chevron-down cool"><%= downs %></i>'
   '</div>'
-  '<div class="redditPicture">'
-  'url:<%= url %>'
+
+
+  '<div class= "dropdown">'
+  '<button class="info-button"><span><i class="fa fa-reddit"></i></span>'
+     '<ul class="dropdown-menu">'
+       '<li class="dropdown-content"><p class="listItemTitle"><%= title %></p>'
+         '<p class="descrip">'
+           'Score: <%= score %> <br>'
+           'Adult Content?: <%= over18 %>'
+         '</p>'
+       '</li>'
+     '</ul>'
   '</div>'
-  '<div class="vidTitle">'
-  'title: <%= title %>'
+  '</button>'
+
   '</div>'
-  '<div class="vidThumbnail">'
-  '<img src="<%= thumbnail %>"/>'
-  '</div>'
-  '<div class="vidScore">'
-  'Score: <%= score %>'
-  '</div>'
-  '<div class="vidOver18">'
-  'Over 18? <%= over18 %>'
-  '</div>'
-  '<div class="vidSuthor">'
-  'author: <%= author %>'
-  '</div>'
-  '<div class="vidUps">'
-  'Ups: <%= ups %>'
-  '</div>'
-  '<div class="vidDowns">'
-  'Downs: <%= downs %>'
-  '</div>'
-  '<div class="vidSubReddit">'
-  'Subreddit: <%= subreddit %>'
-  '</div>'
-  's'
+
+
+
 ].join("");
