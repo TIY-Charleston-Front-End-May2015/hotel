@@ -20,12 +20,14 @@
 }
 
 .subredditEntry {
-  width: 90%;
+  width: 250px;
+  margin: 0 auto;
   color: white;
 }
 
 .dark {
   margin: 0 auto;
+  width: 270px;
 }
 
 .col-md-4 {

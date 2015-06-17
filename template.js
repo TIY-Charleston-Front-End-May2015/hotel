@@ -2,7 +2,7 @@ var templates = {};
 
 templates.redditVideo = [
 
-  
+
   '<div class ="col-md-4 vidBox">'
   '<div class="toolbox">'
   '<i class="fa fa-user cool"> <%= author %></i><i class="fa fa-chevron-up cool"></i><i class="fa fa-chevron-down cool"></i>'
