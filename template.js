@@ -1,0 +1,38 @@
+var templates = {};
+
+templates.redditVideo = [
+
+  
+  '<div class ="col-md-4 vidBox">'
+  '<div class="toolbox">'
+  '<i class="fa fa-user cool"> <%= author %></i><i class="fa fa-chevron-up cool"></i><i class="fa fa-chevron-down cool"></i>'
+  '</div>'
+  '<div class="redditPicture">'
+  'url:<%= url %>'
+  '</div>'
+  '<div class="vidTitle">'
+  'title: <%= title %>'
+  '</div>'
+  '<div class="vidThumbnail">'
+  '<img src="<%= thumbnail %>"/>'
+  '</div>'
+  '<div class="vidScore">'
+  'Score: <%= score %>'
+  '</div>'
+  '<div class="vidOver18">'
+  'Over 18? <%= over18 %>'
+  '</div>'
+  '<div class="vidSuthor">'
+  'author: <%= author %>'
+  '</div>'
+  '<div class="vidUps">'
+  'Ups: <%= ups %>'
+  '</div>'
+  '<div class="vidDowns">'
+  'Downs: <%= downs %>'
+  '</div>'
+  '<div class="vidSubReddit">'
+  'Subreddit: <%= subreddit %>'
+  '</div>'
+  's'
+].join("");
