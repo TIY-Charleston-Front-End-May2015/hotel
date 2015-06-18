@@ -68,28 +68,17 @@
 
 .columnOne{
   padding:0;
+
 }
 
 /*Drop Down */
 
-.info-button {
- background-color: rgb(255, 255, 255);
- display: block;
+button {
+  float: right;
+  margin-top: -2.4em;
+
 }
-.dropdown {
- width: 300px;
- display: inline-block;
-}
-.dropdown:hover .dropdown-menu {
-   display: block;
-}
-.dropdown-menu {
- color: black;
- position: absolute;
- bottom: 100%;
- right: 0;
- margin: 0;
-}
+
 .listItemTitle {
 text-align: center;
 font-style: oblique;

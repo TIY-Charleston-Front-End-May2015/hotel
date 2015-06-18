@@ -8,56 +8,40 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
   <script type="video/html" id="videoTmpl">
+
   <div class ="col-md-4 columnOne">
 
   <a class="viUrl" href = "<%= url %>">
   <div style=
   "background-image: url(<%= thumbnail %>);
-   height: 200px;
-   width: 400px;
-   border: 1px solid black;
-   background-repeat:no-repeat;"
-
+   background-size: 280px 280px;
+   height:24em;
+   background-repeat:no-repeat;
+   background-position: center center;
+   padding-top: 22em;"
    </div>
    </a>
 
+   <div class= "dropdown">
+ <button class="info-button"><span><i class="fa fa-reddit"></i></span>
+     <ul class="dropdown-menu">
+       <li class="dropdown-content"><p class="listItemTitle"><%= title %></p>
+        <p class="descrip">
+            Score: <%= score %> <br>
+            Adult Content?: <%= over18 %>
+          </p>
+        </li>
+      </ul>
+   </div>
+  </button>
+
    <div>
-     <i class="fa fa-user cool"> <%= author %></i><i class="fa fa-chevron-up cool"><%= ups %></i><i class="fa fa-chevron-down cool"><%= downs %></i>
+     <i class="fa fa-user cool center-text"> <%= author %></i><i class="fa fa-chevron-up cool center-text"><%= ups %></i><i class="fa fa-chevron-down cool center-text"><%= downs %></i>
+
    </div>
    </div>
   </script>
- <!-- //  <div class ="col-md-4 vidBox">
- //  <div class="toolbox">
- //  <i class="fa fa-user cool"> <%= author %></i><i class="fa fa-chevron-up cool"></i><i class="fa fa-chevron-down cool"></i>
- //  </div>
- //  <div class="vidUrl">
- //  url:<%= url %>
- //  </div>
- //  <div class="vidTitle">
- //  title: <%= title %>
- //  </div>
- //  <div class="vidThumbnail">
- //  <img src="<%= thumbnail %>"/>
- //  </div>
- //  <div class="vidScore">
- //  Score: <%= score %>
- //  </div>
- //  <div class="vidOver18">
- //  Over 18? <%= over18 %>
- //  </div>
- //  <div class="vidSuthor">
- //  author: <%= author %>
- //  </div>
- //  <div class="vidUps">
- //  Ups: <%= ups %>
- //  </div>
- //  <div class="vidDowns">
- //  Downs: <%= downs %>
- //  </div>
- //  <div class="vidSubReddit">
- //  Subreddit: <%= subreddit %>
- //  </div>
- // </div> -->
+
 
 </head>
 
@@ -83,6 +67,7 @@
     </li>
   </ul>
 </div>
+
 
 
 <div class ="contentContainer page hour">
@@ -122,6 +107,8 @@
 
 <script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"> </script>
+<script type="text/javascript" src="bower_components/bootstrap/js/tooltip.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap/js/popover.js"></script>
 <script type="text/javascript" src="template.js"></script>
 <script type="text/javascript" src="main.js"></script>
 </body>
