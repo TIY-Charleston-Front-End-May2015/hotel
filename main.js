@@ -15,7 +15,6 @@ urlWithoutInitialSubreddit: "https://www.reddit.com/r/",
     page.initStyling();
     page.initEvents();
   },
-
   initStyling: function () {
     $('.search').on('change', function(e) {
       e.preventDefault();
@@ -99,7 +98,6 @@ urlWithoutInitialSubreddit: "https://www.reddit.com/r/",
 
 
 },
-
 
 
 };
